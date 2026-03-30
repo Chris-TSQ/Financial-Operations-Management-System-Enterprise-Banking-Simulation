@@ -1,6 +1,6 @@
 # Financial Operations Management System (Enterprise Banking Simulation)
 
-OBS Login Project
+OBS Education System Project
 
 ---
 
