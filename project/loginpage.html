@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Comment Form</title>
+
+    <!-- bootstrap urls --> 
+    <!-- Latest compiled and minified CSS bootstrap url -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme CSS bootstrap url -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript bootstrap url -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+    <!-- bootstrap finish -->
+
+	<!-- jQuery and jQuery plugin .js files -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+	<script>
+		$().ready(function () {
+
+			$("#signupForm").validate({
+				// in 'rules' user have to specify all the constraints for respective fields
+				rules: {
+					username: {
+						required: true,
+						minlength: 2 
+					},
+					password: {
+						required: true,
+						minlength: 5
+					}
+				},
+				messages: {					
+					username: {
+						required: " Please enter a username",
+						minlength: " Your username must consist of at least 2 characters"
+					},
+					password: {
+						required: " Please enter a password",
+						minlength: " Your password must be consist of at least 5 characters"
+					}					
+				}
+			});
+		});
+
+	</script>
+</head>
+
+<body>
+	<form class="cmxform" id="signupForm" method="get" action="form-handler.html" autocomplete="off" style="margin: 2%;">
+			<legend>Login Page</legend><br>
+            <fieldset>
+<p class="row">
+				<label for="userid" class="col-md-1">User ID</label>
+				<input id="userid" name="userid" type="text" class="col-md-1"></input>
+			</p>
+
+			
+<p class="row">
+				<label for="password" class="col-md-1">Password</label>
+				<input id="password" name="password" type="password" class="col-md-1"></input>
+			</p>
+					
+<p class="row">
+    <label class="col-md-1"></label>
+				<input class="login col-md-1" type="submit" value="Login">
+			</p>
+
+		</fieldset>
+	</form>
+</body>
+
+</html>
